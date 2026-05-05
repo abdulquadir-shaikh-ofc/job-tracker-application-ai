@@ -34,7 +34,9 @@ jobs:
         
       - name: Build
         run: npm run build
-        
+        env:
+          REACT_APP_API_URL: https://job-tracker-application-ai.onrender.com
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
