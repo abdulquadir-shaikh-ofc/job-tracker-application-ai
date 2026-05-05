@@ -1,0 +1,22 @@
+{
+  "name": "job-tracker-fullstack",
+  "version": "1.0.0",
+  "description": "AI-Powered Job Application Tracker - Full Stack",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm start --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "build:frontend": "npm run build --prefix frontend",
+    "start:backend": "npm start --prefix backend",
+    "deploy:backend": "cd backend && git push heroku main",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["job-tracker", "ai", "react", "express", "anthropic"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
+}
